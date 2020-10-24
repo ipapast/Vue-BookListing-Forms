@@ -1,19 +1,19 @@
 <template>
-  <li>
-    {{book.title}} : {{book.author}}
-  </li>
+  <li>{{book.title}} : {{book.author}}</li>
+  <span v-if="book.finishedReading === true">Read</span>
+  <span v-else>Not Read</span>
 </template>
 
 <script>
-export default {
-  name: 'BookItem',
-  props: ['book'],
-};
+  export default {
+    name: 'BookItem',
+    props: ['book'],
+  };
 </script>
 
 <style>
-li {
-  display: block;
-  margin: 0 10px;
-}
+  li {
+    display: block;
+    margin: 0 10px;
+  }
 </style>
